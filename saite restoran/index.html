@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ресторан 'Мой ресторан' - семейный ресторан с домашней атмосферой">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Мой ресторан | Семейный ресторан с домашней атмосферой</title>
+    
+    <!-- Подключение React и ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Подключение Babel для преобразования JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="logo">
+            <h1 class="marck-script-regular">Мой ресторан</h1> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active" data-target="home"><i class="fas fa-home"></i> Главная</a></li>
+            <li><a href="#" data-target="menu"><i class="fas fa-utensils"></i> Меню</a></li>
+            <li><a href="#" data-target="about"><i class="fas fa-info-circle"></i> О нас</a></li>
+            <li><a href="#" data-target="contact"><i class="fas fa-phone-alt"></i> Контакты</a></li>
+            <li><a href="#" data-target="reservation"><i class="fas fa-calendar-check"></i> Бронирование</a></li>
+        </ul>
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> пр.Кирова, д.43</p>
+            <p><i class="fas fa-phone"></i> +7 (921) 900-44-70</p>
+            <p><i class="fas fa-clock"></i> Пн-Вс: 12:00 - 23:00</p>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1 class="marck-script-regular"> Добро пожаловать в "Мой ресторан"</h1>
+                <p>Мы предлагаем разнообразные блюда, приготовленные из свежих продуктов от местных поставщиков.
+                    Насладитесь неповторимой атмосферой и безупречным сервисом.</p>
+                <a href="#" class="btn" data-target="reservation">Забронировать стол</a>
+            </div>
+            <div class="image-container">
+                <img src="photo_2.jpg" class="image" alt="Картинка 1">
+                <img src="photo_1.jpg" class="image" alt="Картинка 2">
+                <div style="clear: both;"></div> 
+            </div>
+        </section>
+
+        <section id="menu" class="section">
+            <h2>Наше меню</h2>
+            
+            <div class="menu-category">
+                <h3>Салаты</h3>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">Цезарь с креветками</div>
+                        <div class="item-description">Салатный микс, черри, креветки, гренки, Пармезан, соус Цезарь</div>
+                    </div>
+                    <div class="item-price">585 ₽</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">Теплый салат с тунцом</div>
+                        <div class="item-description">Салатный микс, тунец, сладкий перец, томаты, перепелиное яйцо, соус</div>
+                    </div>
+                    <div class="item-price">495 ₽</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">Салат с хрустящими баклажанами</div>
+                        <div class="item-description">Баклажаны в темпурном кляре с сыром Фета, томатами, красным луком и сладким чили</div>
+                    </div>
+                    <div class="item-price">420 ₽</div>
+                </div>
+            </div>
+            
+            <div class="menu-category">
+                <h3>Основные блюда</h3>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">Щучьи котлеты от шефа</div>
+                        <div class="item-description">Котлеты с зеленым маслом, картофельным пюре и соусом Тар-Тар</div>
+                    </div>
+                    <div class="item-price">599 ₽</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">Стейк из форели</div>
+                        <div class="item-description">Филе форели с соусом Тар-Тар</div>
+                    </div>
+                    <div class="item-price">945 ₽</div>
+                </div>
+                <div class="menu-item">
+                    <div>
+                        <div class="item-name">Горячая сковородка со свининой</div>
+                        <div class="item-description">Свинина с картофелем и овощами</div>
+                    </div>
+                    <div class="item-price">495 ₽</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>О нашем ресторане</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Самая вкусная еда таит в себе маленький секрет: в нее бросают всегда щепотку любви и заботы...❤.</p>
+                    <p style="margin: 20px 0;"> МОЙ РЕСТОРАН - это не просто ресторан с хорошей кухней. 
+                        Это место, где можно собраться с друзьями, встретиться с любимыми, 
+                        где можно отвлечься от суеты и побаловать себя чем-то вкусненьким...Это место, где всегда вам рады!.</p>
+                </div>
+                <div class="image-container2">
+                    <img src="photo_3.jpg" class="image" alt="Картинка 3">
+                    <img src="photo_4.jpg" class="image" alt="Картинка 4">
+                    <div style="clear: both;"></div> 
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Контакты</h2>
+            <div class="contact-container">
+                <div class="contact-info-card">
+                    <h3>Наш адрес</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> пр.Кирова, д.43, г.Подпорожье</p>
+                    <p><i class="fas fa-phone"></i> +7 (921) 900-44-70</p>
+                    <p><i class="fas fa-envelope"></i> info@moirestoran.ru</p>
+                    
+                    <h3 style="margin-top: 20px;">Часы работы</h3>
+                    <p><i class="fas fa-clock"></i> Понедельник - Четверг: 12:00 - 22:00</p>
+                    <p><i class="fas fa-clock"></i> Пятница - Воскресенье: 12:00 - 01:00</p>
+                </div>
+                
+                <div class="map">
+                    <iframe 
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A9a3d0b3b7e7c8e6b5a4d2c1e8f7a6b9d&amp;source=constructor" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="reservation" class="section">
+            <h2>Бронирование столика</h2>
+            <!-- Контейнер для React-компонента -->
+            <div id="reservation-form-root"></div>
+        </section>
+    </main>
+
+    <!-- React компонент для формы бронирования -->
+    <script type="text/babel">
+        const { useState } = React;
+        
+        function ReservationForm() {
+            const [formData, setFormData] = useState({
+                name: '',
+                phone: '',
+                date: '',
+                time: '',
+                guests: '',
+                message: ''
+            });
+            
+            const [submitted, setSubmitted] = useState(false);
+            
+            const handleChange = (e) => {
+                const { name, value } = e.target;
+                setFormData(prevState => ({
+                    ...prevState,
+                    [name]: value
+                }));
+            };
+            
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                // Здесь можно добавить отправку данных на сервер
+                console.log('Данные формы:', formData);
+                setSubmitted(true);
+                
+                // Сброс формы через 3 секунды
+                setTimeout(() => {
+                    setFormData({
+                        name: '',
+                        phone: '',
+                        date: '',
+                        time: '',
+                        guests: '',
+                        message: ''
+                    });
+                    setSubmitted(false);
+                }, 3000);
+            };
+            
+            if (submitted) {
+                return (
+                    <div className="success-message">
+                        <i className="fas fa-check-circle"></i>
+                        <h3>Бронирование отправлено!</h3>
+                        <p>Мы свяжемся с вами в ближайшее время для подтверждения.</p>
+                    </div>
+                );
+            }
+            
+            return (
+                <form onSubmit={handleSubmit}>
+                    <div className="form-row">
+                        <div className="form-field">
+                            <label htmlFor="name">Ваше имя</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required 
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label htmlFor="phone">Телефон</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                required 
+                            />
+                        </div>
+                    </div>
+                    
+                    <div className="form-row">
+                        <div className="form-field">
+                            <label htmlFor="date">Дата</label>
+                            <input 
+                                type="date" 
+                                id="date" 
+                                name="date"
+                                value={formData.date}
+                                onChange={handleChange}
+                                required 
+                            />
+                        </div>
+                        <div className="form-field">
+                            <label htmlFor="time">Время</label>
+                            <input 
+                                type="time" 
+                                id="time" 
+                                name="time"
+                                value={formData.time}
+                                onChange={handleChange}
+                                required 
+                            />
+                        </div>
+                    </div>
+                    
+                    <div className="form-group">
+                        <label htmlFor="guests">Количество гостей</label>
+                        <select 
+                            id="guests" 
+                            name="guests"
+                            value={formData.guests}
+                            onChange={handleChange}
+                            required
+                        >
+                            <option value="">Выберите количество</option>
+                            <option value="1">1 человек</option>
+                            <option value="2">2 человека</option>
+                            <option value="3">3 человека</option>
+                            <option value="4">4 человека</option>
+                            <option value="5">5+ человек</option>
+                        </select>
+                    </div>
+                    
+                    <div className="form-group">
+                        <label htmlFor="message">Дополнительные пожелания</label>
+                        <textarea 
+                            id="message" 
+                            name="message"
+                            rows="4"
+                            value={formData.message}
+                            onChange={handleChange}
+                        ></textarea>
+                    </div>
+                    
+                    <button type="submit" className="btn">Забронировать</button>
+                </form>
+            );
+        }
+        
+        // Рендеринг React-компонента
+        ReactDOM.render(<ReservationForm />, document.getElementById('reservation-form-root'));
+    </script>
+
+    <script>
+        // Навигация между разделами
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelectorAll('.nav-links a').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                this.classList.add('active');
+                
+                document.querySelectorAll('.section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                const targetId = this.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        // Обработка кнопки "Забронировать стол" в герое
+        document.querySelector('.hero .btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelectorAll('.nav-links a').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelector('[data-target="reservation"]').classList.add('active');
+            
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById('reservation').classList.add('active');
+        });
+    </script>
+</body>
+</html>
